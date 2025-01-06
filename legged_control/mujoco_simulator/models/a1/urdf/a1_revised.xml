@@ -1,0 +1,73 @@
+<mujoco model="a1">
+  <compiler angle="radian" meshdir="../meshes/"/>
+
+  <asset>
+    <texture type="skybox" builtin="gradient" rgb1="0.3 0.5 0.7" rgb2="0 0 0" width="512" height="512" />
+    <texture name="texplane" type="2d" builtin="checker" rgb1=".2 .3 .4" rgb2=".1 0.15 0.2" width="512" height="512" mark="cross" markrgb=".8 .8 .8" />
+    <material name="matplane" reflectance="0.3" texture="texplane" texrepeat="1 1" texuniform="true" />
+    
+    <mesh name="trunk" file="trunk.obj"/>
+    <mesh name="hip" file="hip.obj"/>
+    <mesh name="thigh_mirror" file="thigh_mirror.obj"/>
+    <mesh name="calf" file="calf.obj"/>
+    <mesh name="thigh" file="thigh.obj"/>
+  </asset>
+
+  <worldbody>
+    <light directional="true" diffuse=".4 .4 .4" specular="0.1 0.1 0.1" pos="0 0 5.0" dir="0 0 -1" castshadow="false" />
+    <light directional="true" diffuse=".6 .6 .6" specular="0.2 0.2 0.2" pos="0 0 4" dir="0 0 -1" />
+    <geom name="floor" pos="0 0 0" size="15 15 1" type="plane" material="matplane" margin="0.001" condim="3" friction="1 0.005 0.0001" />
+    
+    <geom type="box" size="0.1 0.1 0.05" pos="0.1 0 0" rgba="0 0 1 0.3"/>
+
+    <geom size="0.0005 0.0005 0.0005" type="box" contype="0" conaffinity="0" group="1" density="0"/>
+
+    <!-- Base Link -->
+        <body name="base" pos="0 0 0">
+            <geom type="box" size="0.0005 0.0005 0.0005" rgba="0.5 0.5 0.5 1" />
+            
+            <!-- Floating Base Joint -->
+            <body name="trunk" pos="0 0 0">
+                <geom type="mesh" mesh="trunk" rgba="1 0.5 0 1" />
+                <inertial pos="0.0 0.0041 -0.0005" mass="6.0" diaginertia="0.0158533 0.0377999 0.0456542" />
+
+                <!-- IMU Joint -->
+                <body name="imu_link" pos="0 0 0">
+                    <joint type="fixed" />
+                    <geom type="box" size="0.0005 0.0005 0.0005" rgba="1 0 0 1" />
+                    <inertial pos="0 0 0" mass="0.001" diaginertia="0.0001 0.0001 0.0001" />
+                </body>
+
+                <!-- FR Hip Joint -->
+                <body name="FR_hip" pos="0.1805 -0.047 0">
+                    <joint name="FR_hip_joint" type="hinge" axis="1 0 0" range="-45.99 45.99" />
+                    <geom type="mesh" mesh="hip" rgba="1 0.5 0 1" />
+                    <inertial pos="-0.003311 -0.000635 0.000031" mass="0.696" diaginertia="0.000469 0.000807 0.000553" />
+
+                    <!-- FR Thigh Joint -->
+                    <body name="FR_thigh" pos="0 -0.0838 0">
+                        <joint name="FR_thigh_joint" type="hinge" axis="0 1 0" range="-60 240" />
+                        <geom type="mesh" mesh="thigh_mirror" rgba="1 0.5 0 1" />
+                        <inertial pos="-0.003237 0.022327 -0.027326" mass="1.013" diaginertia="0.005529 0.005139 0.001368" />
+
+                        <!-- FR Calf Joint -->
+                        <body name="FR_calf" pos="0 0 -0.2">
+                            <joint name="FR_calf_joint" type="hinge" axis="0 1 0" range="-154.5 -52.5" />
+                            <geom type="mesh" mesh="calf" rgba="1 0.5 0 1" />
+                            <inertial pos="0.006435 0 -0.107388" mass="0.166" diaginertia="0.002998 0.003014 0.000032" />
+
+                            <!-- FR Foot Fixed -->
+                            <body name="FR_foot" pos="0 0 -0.2">
+                                <joint type="fixed" />
+                                <geom type="sphere" size="0.01" rgba="1 0.5 0 1" />
+                                <inertial pos="0 0 0" mass="0.06" diaginertia="0.0000096 0.0000096 0.0000096" />
+                            </body>
+                        </body>
+                    </body>
+                </body>
+            </body>
+        </body>
+  </worldbody>
+
+  
+</mujoco>

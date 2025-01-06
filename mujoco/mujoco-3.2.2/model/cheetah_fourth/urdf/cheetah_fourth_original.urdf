@@ -1,0 +1,1173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="Cheetah_fourth">
+  <mujoco>
+    <compiler
+    	meshdir="../meshes/"
+    	balanceinertia="true"
+    	discardvisual="false" />
+  </mujoco>
+  <link
+    name="BODY">
+    <inertial>
+      <origin
+        xyz="-0.00146519 2.347E-05 -0.00519656"
+        rpy="0 0 0" />
+      <mass
+        value="43.51065452" />
+      <inertia
+        ixx="1.00623908"
+        ixy="0.00027209"
+        ixz="0.00398275"
+        iyy="2.0487861"
+        iyz="3.28E-06"
+        izz="2.63616358" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Cheetah_fourth/meshes/BODY.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Cheetah_fourth/meshes/BODY.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="FR_1">
+    <inertial>
+      <origin
+        xyz="0.092555 -0.01613 0.050348"
+        rpy="0 0 0" />
+      <mass
+        value="20.135" />
+      <inertia
+        ixx="0.3305"
+        ixy="0.059908"
+        ixz="-0.050984"
+        iyy="0.56539"
+        iyz="0.0049697"
+        izz="0.39769" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Cheetah_fourth/meshes/FR_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Cheetah_fourth/meshes/FR_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FR_1A"
+    type="revolute">
+    <origin
+      xyz="0.3575 -0.2 0"
+      rpy="0 0 0" />
+    <parent
+      link="BODY" />
+    <child
+      link="FR_1" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="1000"
+      velocity="50" />
+  </joint>
+  <link
+    name="FR_2">
+    <inertial>
+      <origin
+        xyz="-0.10611 -0.00050205 -0.13892"
+        rpy="0 0 0" />
+      <mass
+        value="14.125" />
+      <inertia
+        ixx="0.097553"
+        ixy="3.5E-06"
+        ixz="0.0093113"
+        iyy="0.23134"
+        iyz="1.43E-06"
+        izz="0.17865" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Cheetah_fourth/meshes/FR_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Cheetah_fourth/meshes/FR_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FR_2A"
+    type="revolute">
+    <origin
+      xyz="0.2902 -0.164 0.082427"
+      rpy="0 0 0" />
+    <parent
+      link="FR_1" />
+    <child
+      link="FR_2" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="1000"
+      velocity="50" />
+  </joint>
+  <link
+    name="FR_3">
+    <inertial>
+      <origin
+        xyz="-0.094809 0.00026458 -0.10877"
+        rpy="0 0 0" />
+      <mass
+        value="7.5034" />
+      <inertia
+        ixx="0.083138"
+        ixy="4.539E-05"
+        ixz="0.0077468"
+        iyy="0.086786"
+        iyz="-0.00016735"
+        izz="0.018672" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Cheetah_fourth/meshes/FR_3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Cheetah_fourth/meshes/FR_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FR_3A"
+    type="revolute">
+    <origin
+      xyz="-0.28251 0 -0.22953"
+      rpy="0 0 0" />
+    <parent
+      link="FR_2" />
+    <child
+      link="FR_3" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="1000"
+      velocity="50" />
+  </joint>
+  <link
+    name="FR_4">
+    <inertial>
+      <origin
+        xyz="-0.0058308 0 -0.008628"
+        rpy="0 0 0" />
+      <mass
+        value="0.87541" />
+      <inertia
+        ixx="0.0012892"
+        ixy="0"
+        ixz="4.401E-05"
+        iyy="0.00065005"
+        iyz="0"
+        izz="0.0013193" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Cheetah_fourth/meshes/FR_4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Cheetah_fourth/meshes/FR_4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FR_4A"
+    type="fixed">
+    <origin
+      xyz="-0.034765 0 -0.33897"
+      rpy="0 0 0" />
+    <parent
+      link="FR_3" />
+    <child
+      link="FR_4" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="FR_5">
+    <inertial>
+      <origin
+        xyz="-6.5164E-09 -4.2276E-08 0.0084722"
+        rpy="0 0 0" />
+      <mass
+        value="0.3917" />
+      <inertia
+        ixx="0.00040822"
+        ixy="-3.5273E-11"
+        ixz="8.9063E-11"
+        iyy="0.00040822"
+        iyz="3.0242E-10"
+        izz="0.00055712" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Cheetah_fourth/meshes/FR_5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.69804 0.69804 0.69804 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Cheetah_fourth/meshes/FR_5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FR_5A"
+    type="fixed">
+    <origin
+      xyz="0 0 -0.085617"
+      rpy="0 0 0" />
+    <parent
+      link="FR_4" />
+    <child
+      link="FR_5" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="FL_1">
+    <inertial>
+      <origin
+        xyz="0.092581 0.015926 0.050388"
+        rpy="0 0 0" />
+      <mass
+        value="20.139" />
+      <inertia
+        ixx="0.33054"
+        ixy="-0.0597"
+        ixz="-0.051051"
+        iyy="0.56512"
+        iyz="-0.004275"
+        izz="0.39738" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Cheetah_fourth/meshes/FL_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Cheetah_fourth/meshes/FL_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FL_1A"
+    type="revolute">
+    <origin
+      xyz="0.3575 0.2 0"
+      rpy="0 0 0" />
+    <parent
+      link="BODY" />
+    <child
+      link="FL_1" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="1000"
+      velocity="50" />
+  </joint>
+  <link
+    name="FL_2">
+    <inertial>
+      <origin
+        xyz="-0.10611 0.0010496 -0.13892"
+        rpy="0 0 0" />
+      <mass
+        value="14.125" />
+      <inertia
+        ixx="0.097553"
+        ixy="-3.347E-05"
+        ixz="0.0093112"
+        iyy="0.23134"
+        iyz="0.00021065"
+        izz="0.17865" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Cheetah_fourth/meshes/FL_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Cheetah_fourth/meshes/FL_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FL_2A"
+    type="revolute">
+    <origin
+      xyz="0.2902 0.164 0.082427"
+      rpy="0 0 0" />
+    <parent
+      link="FL_1" />
+    <child
+      link="FL_2" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="1000"
+      velocity="50" />
+  </joint>
+  <link
+    name="FL_3">
+    <inertial>
+      <origin
+        xyz="-0.094809 0.00069651 -0.10811"
+        rpy="0 0 0" />
+      <mass
+        value="7.5034" />
+      <inertia
+        ixx="0.083138"
+        ixy="1.463E-05"
+        ixz="0.0077469"
+        iyy="0.086786"
+        iyz="0.00010313"
+        izz="0.018672" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Cheetah_fourth/meshes/FL_3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Cheetah_fourth/meshes/FL_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FL_3A"
+    type="revolute">
+    <origin
+      xyz="-0.28251 0 -0.22953"
+      rpy="0 0 0" />
+    <parent
+      link="FL_2" />
+    <child
+      link="FL_3" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="1000"
+      velocity="50" />
+  </joint>
+  <link
+    name="FL_4">
+    <inertial>
+      <origin
+        xyz="-0.0058308 3.427E-05 -0.008628"
+        rpy="0 0 0" />
+      <mass
+        value="0.87541" />
+      <inertia
+        ixx="0.0012892"
+        ixy="-1.7E-07"
+        ixz="4.401E-05"
+        iyy="0.00065006"
+        iyz="-2.66E-06"
+        izz="0.0013193" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Cheetah_fourth/meshes/FL_4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Cheetah_fourth/meshes/FL_4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FL_4A"
+    type="fixed">
+    <origin
+      xyz="-0.034765 0 -0.33897"
+      rpy="0 0 0" />
+    <parent
+      link="FL_3" />
+    <child
+      link="FL_4" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="FL_5">
+    <inertial>
+      <origin
+        xyz="-1.3294E-08 -3.368E-05 0.0084721"
+        rpy="0 0 0" />
+      <mass
+        value="0.3917" />
+      <inertia
+        ixx="0.00040822"
+        ixy="-3.8199E-12"
+        ixz="1.5061E-11"
+        iyy="0.00040822"
+        iyz="5.9129E-07"
+        izz="0.00055711" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Cheetah_fourth/meshes/FL_5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.69804 0.69804 0.69804 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Cheetah_fourth/meshes/FL_5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FL_5A"
+    type="fixed">
+    <origin
+      xyz="0 0 -0.085616"
+      rpy="0 0 0" />
+    <parent
+      link="FL_4" />
+    <child
+      link="FL_5" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="BR_1">
+    <inertial>
+      <origin
+        xyz="-0.092581 -0.016126 0.050324"
+        rpy="0 0 0" />
+      <mass
+        value="20.139" />
+      <inertia
+        ixx="0.33054"
+        ixy="-0.059903"
+        ixz="0.050814"
+        iyy="0.56508"
+        iyz="0.004941"
+        izz="0.39742" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Cheetah_fourth/meshes/BR_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Cheetah_fourth/meshes/BR_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="BR_1A"
+    type="revolute">
+    <origin
+      xyz="-0.3575 -0.2 0"
+      rpy="0 0 0" />
+    <parent
+      link="BODY" />
+    <child
+      link="BR_1" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="1000"
+      velocity="50" />
+  </joint>
+  <link
+    name="BR_2">
+    <inertial>
+      <origin
+        xyz="0.11812 -0.00049795 -0.15137"
+        rpy="0 0 0" />
+      <mass
+        value="14.125" />
+      <inertia
+        ixx="0.084797"
+        ixy="3.29E-06"
+        ixz="-0.006402"
+        iyy="0.24783"
+        iyz="-1.74E-06"
+        izz="0.2079" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Cheetah_fourth/meshes/BR_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Cheetah_fourth/meshes/BR_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="BR_2A"
+    type="revolute">
+    <origin
+      xyz="-0.2902 -0.164 0.082427"
+      rpy="0 0 0" />
+    <parent
+      link="BR_1" />
+    <child
+      link="BR_2" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="1000"
+      velocity="50" />
+  </joint>
+  <link
+    name="BR_3">
+    <inertial>
+      <origin
+        xyz="-0.0077831 -0.00026544 -0.14985"
+        rpy="0 0 0" />
+      <mass
+        value="7.4789" />
+      <inertia
+        ixx="0.046472"
+        ixy="0.00015024"
+        ixz="-0.033286"
+        iyy="0.089801"
+        iyz="9.283E-05"
+        izz="0.058346" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Cheetah_fourth/meshes/BR_3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Cheetah_fourth/meshes/BR_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="BR_3A"
+    type="revolute">
+    <origin
+      xyz="0.28251 0 -0.22953"
+      rpy="0 0 0" />
+    <parent
+      link="BR_2" />
+    <child
+      link="BR_3" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="1000"
+      velocity="50" />
+  </joint>
+  <link
+    name="BR_4">
+    <inertial>
+      <origin
+        xyz="0.00091487 0 -0.0021561"
+        rpy="0 0 0" />
+      <mass
+        value="1.3181" />
+      <inertia
+        ixx="0.0041969"
+        ixy="0"
+        ixz="0.0022244"
+        iyy="0.0049669"
+        iyz="0"
+        izz="0.0040026" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Cheetah_fourth/meshes/BR_4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Cheetah_fourth/meshes/BR_4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="BR_4A"
+    type="fixed">
+    <origin
+      xyz="-0.17621 0 -0.30316"
+      rpy="0 0 0" />
+    <parent
+      link="BR_3" />
+    <child
+      link="BR_4" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="BR_5">
+    <inertial>
+      <origin
+        xyz="-3.7932E-08 1.536E-08 0.0084722"
+        rpy="0 0 0" />
+      <mass
+        value="0.3917" />
+      <inertia
+        ixx="0.00040822"
+        ixy="-5.2928E-12"
+        ixz="2.5939E-11"
+        iyy="0.00040822"
+        iyz="-7.5756E-12"
+        izz="0.00055712" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Cheetah_fourth/meshes/BR_5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.69804 0.69804 0.69804 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Cheetah_fourth/meshes/BR_5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="BR_5A"
+    type="fixed">
+    <origin
+      xyz="0.061109 0 -0.12143"
+      rpy="0 0 0" />
+    <parent
+      link="BR_4" />
+    <child
+      link="BR_5" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="BL_1">
+    <inertial>
+      <origin
+        xyz="-0.092555 0.01613 0.050348"
+        rpy="0 0 0" />
+      <mass
+        value="20.135" />
+      <inertia
+        ixx="0.3305"
+        ixy="0.059908"
+        ixz="0.050984"
+        iyy="0.56539"
+        iyz="-0.0049697"
+        izz="0.39769" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Cheetah_fourth/meshes/BL_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Cheetah_fourth/meshes/BL_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="BL_1A"
+    type="revolute">
+    <origin
+      xyz="-0.3575 0.2 0"
+      rpy="0 0 0" />
+    <parent
+      link="BODY" />
+    <child
+      link="BL_1" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="1000"
+      velocity="50" />
+  </joint>
+  <link
+    name="BL_2">
+    <inertial>
+      <origin
+        xyz="0.11767 0.00050205 -0.15172"
+        rpy="0 0 0" />
+      <mass
+        value="14.125" />
+      <inertia
+        ixx="0.08476"
+        ixy="3.29E-06"
+        ixz="-0.0060363"
+        iyy="0.24783"
+        iyz="-1.75E-06"
+        izz="0.20794" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Cheetah_fourth/meshes/BL_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Cheetah_fourth/meshes/BL_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="BL_2A"
+    type="revolute">
+    <origin
+      xyz="-0.2902 0.164 0.082427"
+      rpy="0 0 0" />
+    <parent
+      link="BL_1" />
+    <child
+      link="BL_2" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="1000"
+      velocity="50" />
+  </joint>
+  <link
+    name="BL_3">
+    <inertial>
+      <origin
+        xyz="-0.0082282 -0.00026544 -0.14983"
+        rpy="0 0 0" />
+      <mass
+        value="7.4789" />
+      <inertia
+        ixx="0.046275"
+        ixy="0.00015051"
+        ixz="-0.03325"
+        iyy="0.089801"
+        iyz="9.238E-05"
+        izz="0.058544" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Cheetah_fourth/meshes/BL_3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Cheetah_fourth/meshes/BL_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="BL_3A"
+    type="revolute">
+    <origin
+      xyz="0.28251 0 -0.22953"
+      rpy="0 0 0" />
+    <parent
+      link="BL_2" />
+    <child
+      link="BL_3" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="1000"
+      velocity="50" />
+  </joint>
+  <link
+    name="BL_4">
+    <inertial>
+      <origin
+        xyz="0.00091487 0 -0.0021561"
+        rpy="0 0 0" />
+      <mass
+        value="1.3181" />
+      <inertia
+        ixx="0.0041969"
+        ixy="0"
+        ixz="0.0022244"
+        iyy="0.0049669"
+        iyz="0"
+        izz="0.0040026" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Cheetah_fourth/meshes/BL_4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Cheetah_fourth/meshes/BL_4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="BL_4A"
+    type="fixed">
+    <origin
+      xyz="-0.177 0 -0.30252"
+      rpy="0 0 0" />
+    <parent
+      link="BL_3" />
+    <child
+      link="BL_4" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="BL_5">
+    <inertial>
+      <origin
+        xyz="4.25355798361338E-08 -1.33082913578164E-08 0.00847216100345927"
+        rpy="0 0 0" />
+      <mass
+        value="0.391699574545592" />
+      <inertia
+        ixx="0.000408218425496498"
+        ixy="4.83645834547861E-11"
+        ixz="-2.96274446419355E-10"
+        iyy="0.000408217973629804"
+        iyz="9.01846771757607E-11"
+        izz="0.000557116575391156" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Cheetah_fourth/meshes/BL_5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.698039215686274 0.698039215686274 0.698039215686274 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Cheetah_fourth/meshes/BL_5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="BL_5A"
+    type="fixed">
+    <origin
+      xyz="0.061109 0 -0.12123"
+      rpy="0 0 0" />
+    <parent
+      link="BL_4" />
+    <child
+      link="BL_5" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+</robot>

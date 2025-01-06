@@ -1,0 +1,22 @@
+controller
+{
+    timestep  0.001
+    mpc_control_frequency  40
+    wbc_control_frequency  500
+}
+
+render
+{
+  render_appearance true
+  render_inertia false
+  visualize_contacts true
+  tracking_base true
+  render_frequency 200
+}
+
+pid
+{
+    kp                   1000
+    kd                   10
+}
+

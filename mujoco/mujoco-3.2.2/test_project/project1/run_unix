@@ -1,0 +1,5 @@
+reset
+make clean
+make
+export LD_LIBRARY_PATH=/home/zhx/Desktop/zhx_ros2_legged/src/mujoco/mujoco-3.2.2/lib:$LD_LIBRARY_PATH
+cd ../../bin && ./project1
