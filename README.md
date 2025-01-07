@@ -106,7 +106,7 @@ source install/local_setup.sh
 # robot type: [a1,b1]
 ros2 launch launch_simulation legged_robot_sqp.launch.py robot_type:=b1
 ```
-### command
+### Command
 You can use the user_command shell to control the gait and movement of the legged robot.
 
 **Examples:**
