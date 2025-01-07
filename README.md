@@ -1,6 +1,6 @@
 # legged_control_ocs2
 
-
+![image](https://github.com/hexiangzhou/legged_control_ocs2.git/images/mujoco_simulation_image.jpg)
 ## Introduction
 
 
