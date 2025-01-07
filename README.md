@@ -23,7 +23,7 @@ The ocs2_ros2 library is based on [zhengxiang94/ocs2_ros2](https://github.com/zh
 ```
 # Clone ocs2_ros2 in ros2_ws/src/legged_control_ocs2
 cd ~/ros2_ws/src/legged_control_ocs2
-# Clone ocs2
+# Clone ocs2_ros2
 git clone https://github.com/zhengxiang94/ocs2_ros2.git
 # Clone pinocchio
 git clone --recurse-submodules https://github.com/zhengxiang94/pinocchio.git
