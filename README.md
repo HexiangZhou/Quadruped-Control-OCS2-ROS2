@@ -19,5 +19,5 @@ git clone https://github.com/hexiangzhou/legged_control_ocs2.git
 ```
 
 ### OCS2_ROS2
-The ocs2_ros2 library is based on [GitHub](https://github.com/zhengxiang94/ocs2_ros2.git)
+The ocs2_ros2 library is based on [zhengxiang94/ocs2_ros2](https://github.com/zhengxiang94/ocs2_ros2.git)
 
