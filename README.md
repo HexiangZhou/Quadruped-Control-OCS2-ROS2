@@ -107,9 +107,11 @@ source install/local_setup.sh
 ros2 launch launch_simulation legged_robot_sqp.launch.py robot_type:=b1
 ```
 ### command
-use user_command shell to control the gait and movement of legged robot
-Example:
-use "gait:trot" to switch gait
-use "goal:1 1 0 0" to set the goal of movement
+You can use the user_command shell to control the gait and movement of the legged robot.
+
+**Examples:**
+* Use "gait:trot" to switch the gait to trot.
+* Use "goal:1 1 0 0" to set the movement goal to "(x, y, z, yaw)=(1, 1, 0, 0)".
+
 
 
