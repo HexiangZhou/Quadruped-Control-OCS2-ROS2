@@ -62,5 +62,15 @@ If the MuJoCo software is installed in the ros2_ws/src/legged_control_ocs2 folde
 set(MUJOCO_INCLUDE_DIRS ~/ros2_ws/src/legged_control_ocs2/mujoco/mujoco-3.2.2/include)  # Replace with your own project absolute path
 set(MUJOCO_LIBRARIES ~/ros2_ws/src/legged_control_ocs2/mujoco/mujoco-3.2.2/lib/libmujoco.so)  # Replace with your own project absolute path
 ```
-2. Add the path of libmujoco.so.3.2.2 to the LD_LIBRARY_PATH environment variable. 
+2. Add the path of libmujoco.so.3.2.2 to the LD_LIBRARY_PATH environment variable.
+```
+# Open the .bashrc file
+gedit ~/.bashrc
+# Add the following line to include the MuJoCo key path, library path, and binary directory
+export MUJOCO_KEY_PATH=~/ros2_ws/src/legged_control_ocs2/mujoco${MUJOCO_KEY_PATH}  # Replace with your own project absolute path
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:~/ros2_ws/src/legged_control_ocs2/mujoco/mujoco-3.2.2/bin  # Replace with your own project absolute path
+export LD_LIBRARY_PATH=~/ros2_ws/src/legged_control_ocs2/mujoco/mujoco-3.2.2/lib:$LD_LIBRARY_PATH  # Replace with your own project absolute path
+# Source the .bashrc file:
+source ~/.bashrc
+```
 
