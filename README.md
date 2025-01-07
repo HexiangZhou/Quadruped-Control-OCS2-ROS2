@@ -3,7 +3,6 @@
 ![image](.image/mujoco_simulation_image.jpg)
 ## Introduction
 
-
 ## Installation
 ### Prerequisites
 * Ubuntu 22.04
@@ -114,4 +113,5 @@ You can use the user_command shell to control the gait and movement of the legge
 * Use "goal:1 1 0 0" to set the movement goal to "(x, y, z, yaw)=(1, 1, 0, 0)".
 
 
+![](.image/simulation_video_gif.gif)
 
