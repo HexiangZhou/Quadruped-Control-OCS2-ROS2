@@ -115,6 +115,6 @@ You can use the user_command shell to control the gait and movement of the legge
 * Use "gait:trot" to switch the gait to trot.
 * Use "goal:1 1 0 0" to set the movement goal to "(x, y, z, yaw)=(1, 1, 0, 0)".
 
-
+**Demonstration:**
 ![](.image/simulation_video_gif.gif)
 
