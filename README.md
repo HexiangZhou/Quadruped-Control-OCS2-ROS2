@@ -42,3 +42,10 @@ sudo apt-get install ros-iron-grid-map-cv ros-iron-grid-map-msgs ros-iron-grid-m
 sudo apt install ros-humble-octomap
 ```
 
+## Build
+### Build ocs2
+```
+colcon build --packages-up-to ocs2_legged_robot_ros ocs2_self_collision_visualization --cmake-args -DCMAKE_BUILD_TYPE=RelWithDebInfo
+```
+Debug: If downloading the dependencies via HTTPS fails, use SSH: "git config --global url."git@github.com:".insteadOf https://github.com/" 
+
