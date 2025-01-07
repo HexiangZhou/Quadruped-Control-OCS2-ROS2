@@ -1,7 +1,7 @@
 # legged_control_ocs2
 
 ![image](.image/mujoco_simulation_image.png)
-![image](.image/structure.png)
+![image](.image/structure.jpg)
 ## Introduction
 
 ## Installation
