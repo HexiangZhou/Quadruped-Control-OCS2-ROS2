@@ -49,7 +49,7 @@ sudo apt install ros-humble-octomap
 git config --global url."git@github.com:".insteadOf https://github.com/
 colcon build --packages-up-to ocs2_legged_robot_ros ocs2_self_collision_visualization --cmake-args -DCMAKE_BUILD_TYPE=RelWithDebInfo
 ```
-Ensure you can command test ANYmal using command below:
+Ensure you can test ANYmal using command below:
 ```
 source install/setup.bash
 ros2 launch ocs2_legged_robot_ros legged_robot_sqp.launch.py
