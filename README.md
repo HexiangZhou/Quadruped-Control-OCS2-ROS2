@@ -99,3 +99,11 @@ colcon build --packages-up-to motion_control
 ```
 colcon build --packages-up-to launch_simulation
 ```
+
+## Quick Start
+```
+source install/local_setup.sh
+# robot type: [a1,b1]
+ros2 launch launch_simulation legged_robot_sqp.launch.py robot_type:=b1
+```
+
