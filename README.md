@@ -54,5 +54,13 @@ Ensure you can test ANYmal using command below:
 source install/setup.bash
 ros2 launch ocs2_legged_robot_ros legged_robot_sqp.launch.py
 ```
+### Build mujoco simulator
 
+If the MuJoCo software is installed in the ros2_ws/src/legged_control_ocs2 folder, you need to modify the CMakeLists.txt in the mojoco_simulator package as follows:
+1. Set the MuJoCo include directory and MuJoCo library in the CMakeLists.txt:
+```
+set(MUJOCO_INCLUDE_DIRS ~/ros2_ws/src/legged_control_ocs2/mujoco/mujoco-3.2.2/include)  # Replace with your own project absolute path
+set(MUJOCO_LIBRARIES ~/ros2_ws/src/legged_control_ocs2/mujoco/mujoco-3.2.2/lib/libmujoco.so)  # Replace with your own project absolute path
+```
+2. Add the path of libmujoco.so.3.2.2 to the LD_LIBRARY_PATH environment variable. 
 
