@@ -1,4 +1,4 @@
-# legged_control_ocs2
+# legged_control_ocs2_ros2
 
 ![image](.image/mujoco_simulation_image.png)
 ![image](.image/structure.jpg)
@@ -13,6 +13,7 @@
 * Boost C++ (v1.74)
 
 ### Source code
+The legged control project is developed based on the open-source library of [OCS2](https://github.com/zhengxiang94/ocs2_ros2.git), using qiayuanl's code as references.[qiayuanl/legged_control]([https://github.com/zhengxiang94/ocs2_ros2.git](https://github.com/qiayuanl/legged_control.git))
 ```
 # Clone legged_control
 git clone https://github.com/hexiangzhou/legged_control_ocs2.git
