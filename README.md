@@ -1,6 +1,6 @@
 # legged_control_ocs2
 
-![image](images/mujoco_simulation_image.jpg)
+![image](.image/mujoco_simulation_image.jpg)
 ## Introduction
 
 
