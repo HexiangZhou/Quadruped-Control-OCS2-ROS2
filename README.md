@@ -95,7 +95,7 @@ target_link_libraries(${PROJECT_NAME} ~/ros2_ws/src/legged_control_ocs2/qpOASES-
 ```
 colcon build --packages-up-to motion_control
 ```
-### Build launch
+### Build ros2 launch
 ```
 colcon build --packages-up-to launch_simulation
 ```
