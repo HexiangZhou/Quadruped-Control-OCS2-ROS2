@@ -16,14 +16,14 @@ This project is based on the open-source library of ocs2_ros2, setting up a simu
 The legged control project is developed based on the open-source library of [OCS2](https://github.com/leggedrobotics/ocs2.git) and [qiayuanl/legged_control](https://github.com/qiayuanl/legged_control.git)
 ```
 # Clone legged_control
-git clone https://github.com/hexiangzhou/legged_control_ocs2.git
+git clone https://github.com/HexiangZhou/Quadruped-Control-OCS2-ROS2.git
 ```
 
 ### OCS2_ROS2
 The ocs2_ros2 library is based on [zhengxiang94/ocs2_ros2](https://github.com/zhengxiang94/ocs2_ros2.git)
 ```
-# Clone ocs2_ros2 in ros2_ws/src/legged_control_ocs2
-cd ~/ros2_ws/src/legged_control_ocs2
+# Clone ocs2_ros2 in ros2_ws/src/Quadruped-Control-OCS2-ROS2
+cd ~/ros2_ws/src/Quadruped-Control-OCS2-ROS2
 # Clone ocs2_ros2
 git clone https://github.com/zhengxiang94/ocs2_ros2.git
 # Clone pinocchio
@@ -58,20 +58,20 @@ ros2 launch ocs2_legged_robot_ros legged_robot_sqp.launch.py
 ![](.image/ocs2_gif.gif)
 ### Build mujoco_simulator
 
-If the MuJoCo software is installed in the ros2_ws/src/legged_control_ocs2 folder, you need to modify the CMakeLists.txt in the mojoco_simulator package as follows:
+If the MuJoCo software is installed in the ros2_ws/src/Quadruped-Control-OCS2-ROS2 folder, you need to modify the CMakeLists.txt in the mojoco_simulator package as follows:
 1. Set the MuJoCo include directory and MuJoCo library in the CMakeLists.txt:
 ```
-set(MUJOCO_INCLUDE_DIRS ~/ros2_ws/src/legged_control_ocs2/mujoco/mujoco-3.2.2/include)  # Replace with your own project absolute path
-set(MUJOCO_LIBRARIES ~/ros2_ws/src/legged_control_ocs2/mujoco/mujoco-3.2.2/lib/libmujoco.so)  # Replace with your own project absolute path
+set(MUJOCO_INCLUDE_DIRS ~/ros2_ws/src/Quadruped-Control-OCS2-ROS2/mujoco/mujoco-3.2.2/include)  # Replace with your own project absolute path
+set(MUJOCO_LIBRARIES ~/ros2_ws/src/Quadruped-Control-OCS2-ROS2/mujoco/mujoco-3.2.2/lib/libmujoco.so)  # Replace with your own project absolute path
 ```
 2. Add the path of libmujoco.so.3.2.2 to the LD_LIBRARY_PATH environment variable.
 ```
 # Open the .bashrc file
 gedit ~/.bashrc
 # Add the following line to include the MuJoCo key path, library path, and binary directory
-export MUJOCO_KEY_PATH=~/ros2_ws/src/legged_control_ocs2/mujoco${MUJOCO_KEY_PATH}  # Replace with your own project absolute path
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:~/ros2_ws/src/legged_control_ocs2/mujoco/mujoco-3.2.2/bin  # Replace with your own project absolute path
-export LD_LIBRARY_PATH=~/ros2_ws/src/legged_control_ocs2/mujoco/mujoco-3.2.2/lib:$LD_LIBRARY_PATH  # Replace with your own project absolute path
+export MUJOCO_KEY_PATH=~/ros2_ws/src/Quadruped-Control-OCS2-ROS2/mujoco${MUJOCO_KEY_PATH}  # Replace with your own project absolute path
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:~/ros2_ws/src/Quadruped-Control-OCS2-ROS2/mujoco/mujoco-3.2.2/bin  # Replace with your own project absolute path
+export LD_LIBRARY_PATH=~/ros2_ws/src/Quadruped-Control-OCS2-ROS2/mujoco/mujoco-3.2.2/lib:$LD_LIBRARY_PATH  # Replace with your own project absolute path
 # Source the .bashrc file:
 source ~/.bashrc
 ```
@@ -84,14 +84,14 @@ colcon build --packages-up-to mujoco_simulator
 colcon build --packages-up-to user_command
 ```
 ### Build motion_control
-If the qpOASES package is installed in the ros2_ws/src/legged_control_ocs2 folder, you need to modify the CMakeLists.txt in the motion_control package as follows:
+If the qpOASES package is installed in the ros2_ws/src/Quadruped-Control-OCS2-ROS2 folder, you need to modify the CMakeLists.txt in the motion_control package as follows:
 1. Revise CMakeLists.txt:
 ```
 #Add the qpOASES header directory and library directory
-include_directories(~/ros2_ws/src/legged_control_ocs2/qpOASES-master/include)  # Modify the path to match your project
-link_directories(~/ros2_ws/src/legged_control_ocs2/qpOASES-master/build/libs)  # Modify the path to match your project
+include_directories(~/ros2_ws/src/Quadruped-Control-OCS2-ROS2/qpOASES-master/include)  # Modify the path to match your project
+link_directories(~/ros2_ws/src/Quadruped-Control-OCS2-ROS2/qpOASES-master/build/libs)  # Modify the path to match your project
 #Explicitly link the libqpOASES.a library in the target_link_libraries section
-target_link_libraries(${PROJECT_NAME} ~/ros2_ws/src/legged_control_ocs2/qpOASES-master/build/libs/libqpOASES.a) # Modify the path to match your project
+target_link_libraries(${PROJECT_NAME} ~/ros2_ws/src/Quadruped-Control-OCS2-ROS2/qpOASES-master/build/libs/libqpOASES.a) # Modify the path to match your project
 ```
 2. Build motion_control
 ```
