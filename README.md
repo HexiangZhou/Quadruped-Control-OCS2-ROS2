@@ -78,10 +78,6 @@ source ~/.bashrc
 ```
 colcon build --packages-up-to mujoco_simulator
 ```
-### Build user_command
-```
-colcon build --packages-up-to user_command
-```
 ### Build motion_control
 If the qpOASES package is installed in the ros2_ws/src/Quadruped-Control-OCS2-ROS2 folder, you need to modify the CMakeLists.txt in the motion_control package as follows:
 1. Revise CMakeLists.txt:
@@ -95,6 +91,10 @@ target_link_libraries(${PROJECT_NAME} ~/ros2_ws/src/Quadruped-Control-OCS2-ROS2/
 2. Build motion_control
 ```
 colcon build --packages-up-to motion_control
+```
+### Build user_command
+```
+colcon build --packages-up-to user_command
 ```
 ### Build ros2 launch
 ```
